@@ -8,7 +8,9 @@ const Login_btn = () => {
     return (
       <>
         Signed in as {session?.user?.email} <br />
-        <Button onClick={() => signOut()}>Sign out</Button>
+        <Button onClick={() => signOut({ callbackUrl: "/signin" })}>
+          Sign out
+        </Button>
       </>
     );
   }
