@@ -16,7 +16,12 @@ const Login_btn = () => {
   return (
     <>
       Not signed in <br />
-      <Button size="small" variant="contained" onClick={() => signIn()}>
+      <Button
+        size="small"
+        variant="contained"
+        className="bg-amber-600"
+        onClick={() => signIn()}
+      >
         Sign In
       </Button>
     </>
