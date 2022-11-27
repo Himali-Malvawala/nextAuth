@@ -11,9 +11,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <div>
-          <Login_btn />
-        </div>
+        <div></div>
       </main>
     </div>
   );

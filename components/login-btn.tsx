@@ -20,7 +20,7 @@ const Login_btn = () => {
         size="small"
         variant="contained"
         className="bg-amber-600"
-        onClick={() => signIn()}
+        onClick={() => signIn(undefined, { callbackUrl: "/" })}
       >
         Sign In
       </Button>
