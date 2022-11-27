@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useSession, signOut } from "next-auth/react";
-import { Button } from "@mui/material";
+import { Button, Typography, Link } from "@mui/material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -28,6 +29,14 @@ export default function Home() {
               </Button>
             </>
           )}
+          <div>
+            <Link href="/signin">
+              <Typography>
+                Go to the SignIN page
+                <ArrowForwardIcon />
+              </Typography>
+            </Link>
+          </div>
         </div>
       </main>
     </div>
