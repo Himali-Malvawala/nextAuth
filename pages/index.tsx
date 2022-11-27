@@ -1,7 +1,10 @@
 import Head from "next/head";
-import Login_btn from "../components/login-btn";
+import { useSession, signOut } from "next-auth/react";
+import { Button } from "@mui/material";
 
 export default function Home() {
+  const { data: session } = useSession();
+
   return (
     <div>
       <Head>
@@ -11,7 +14,21 @@ export default function Home() {
       </Head>
 
       <main>
-        <div></div>
+        <div>
+          {session && (
+            <>
+              Signed in as {session?.user?.email} <br />
+              <Button
+                size="small"
+                variant="contained"
+                className="bg-amber-600"
+                onClick={() => signOut({ callbackUrl: "/signin" })}
+              >
+                Sign out
+              </Button>
+            </>
+          )}
+        </div>
       </main>
     </div>
   );
