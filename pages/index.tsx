@@ -1,7 +1,8 @@
 import Head from "next/head";
 import { useSession, signOut } from "next-auth/react";
 import { Button, Typography, Link } from "@mui/material";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import LockOpenIcon from "@mui/icons-material/LockOpen";
+import SecurityIcon from "@mui/icons-material/Security";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -43,12 +44,20 @@ export default function Home() {
               </Button>
             </div>
           )}
-          <div className="absolute top-1/2 bg-white bg-opacity-20 backdrop-blur-md px-10 py-7 rounded-lg drop-shadow-2xl">
+          <div className="absolute top-56 sm:top-44 mx-3 md:mx-6 bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl">
             <div>
               <Link href="/signin" underline="none">
                 <Typography className="text-base md:text-lg text-white hover:underline underline-offset-[3px]">
                   Go to the SignIn page
-                  <ArrowForwardIcon className="ml-1" />
+                  <LockOpenIcon className="ml-1" />
+                </Typography>
+              </Link>
+            </div>
+            <div>
+              <Link href="/protected" underline="none">
+                <Typography className="text-base md:text-lg text-white hover:underline underline-offset-[3px]">
+                  Go to the Protected page
+                  <SecurityIcon className="ml-1" />
                 </Typography>
               </Link>
             </div>
