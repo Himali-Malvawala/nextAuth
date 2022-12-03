@@ -29,14 +29,14 @@ export default function Home() {
           </div>
 
           {session && (
-            <div className="absolute top-8 bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl sm:w-10/12 sm:flex sm:justify-between sm:items-center">
+            <div className="absolute top-14 mx-3 md:mx-6 bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl sm:w-11/12 sm:flex sm:justify-between sm:items-center">
               <Typography className="text-white text-base md:text-lg">
                 Signed in as {session?.user?.email}
               </Typography>
               <Button
                 size="small"
                 variant="contained"
-                className="bg-amber-600"
+                className="bg-[#0c4a6e] hover:bg-[#fb7185] mt-3 sm:mt-0"
                 onClick={() => signOut({ callbackUrl: "/signin" })}
               >
                 Sign out
