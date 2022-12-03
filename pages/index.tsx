@@ -27,7 +27,7 @@ export default function Home() {
               <source src="/assets/background-img.mp4" type="video/mp4" />
             </video>
           </div>
-          <div className="absolute top-1/2">
+          <div className="absolute top-1/2 bg-white bg-opacity-20 backdrop-blur-md px-10 py-7 rounded-lg drop-shadow-2xl">
             {session && (
               <>
                 Signed in as {session?.user?.email} <br />
