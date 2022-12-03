@@ -15,38 +15,40 @@ export default function Home() {
       </Head>
 
       <main>
-        <div>
-          <video
-            className="w-full object-cover h-screen"
-            autoPlay
-            muted
-            loop
-            src="/assets/background-img.mp4"
-          >
-            <source src="/assets/background-img.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div>
-          {session && (
-            <>
-              Signed in as {session?.user?.email} <br />
-              <Button
-                size="small"
-                variant="contained"
-                className="bg-amber-600"
-                onClick={() => signOut({ callbackUrl: "/signin" })}
-              >
-                Sign out
-              </Button>
-            </>
-          )}
+        <div className="relative">
           <div>
-            <Link href="/signin">
-              <Typography>
-                Go to the SignIN page
-                <ArrowForwardIcon />
-              </Typography>
-            </Link>
+            <video
+              className="w-full object-cover h-screen"
+              autoPlay
+              muted
+              loop
+              src="/assets/background-img.mp4"
+            >
+              <source src="/assets/background-img.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div className="absolute top-1/2">
+            {session && (
+              <>
+                Signed in as {session?.user?.email} <br />
+                <Button
+                  size="small"
+                  variant="contained"
+                  className="bg-amber-600"
+                  onClick={() => signOut({ callbackUrl: "/signin" })}
+                >
+                  Sign out
+                </Button>
+              </>
+            )}
+            <div>
+              <Link href="/signin">
+                <Typography>
+                  Go to the SignIN page
+                  <ArrowForwardIcon />
+                </Typography>
+              </Link>
+            </div>
           </div>
         </div>
       </main>
