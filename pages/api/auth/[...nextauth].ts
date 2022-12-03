@@ -31,6 +31,9 @@ export const authOptions = {
     //   from: process.env.EMAIL_FROM
     // }),
    ],
+   pages: {
+    signIn: '/auth/signin'
+   }
 };
 
 export default nextAuth(authOptions);
