@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useSession, signOut } from "next-auth/react";
+import { useSession, signOut, signIn } from "next-auth/react";
 import { Button, Typography, Link } from "@mui/material";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import SecurityIcon from "@mui/icons-material/Security";
@@ -43,7 +43,7 @@ export default function Home() {
                 size="small"
                 variant="contained"
                 className="bg-[#0c4a6e] hover:bg-[#fb7185] mt-3 sm:mt-0"
-                onClick={() => signOut({ callbackUrl: "/signin" })}
+                onClick={() => signOut({ callbackUrl: "/" })}
               >
                 Sign out
               </Button>
@@ -51,8 +51,11 @@ export default function Home() {
           )}
           <div className="absolute top-64 sm:top-52 mx-3 md:mx-6 sm:flex sm:justify-between sm:items-center sm:w-11/12">
             <div className="bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl sm:w-1/2 sm:mr-10">
-              <Link href="/signin" underline="none">
-                <Typography className="text-base md:text-lg text-white hover:underline underline-offset-[3px] flex justify-center items-center">
+              <Link
+                underline="none"
+                onClick={() => signIn(undefined, { callbackUrl: "/" })}
+              >
+                <Typography className="text-base md:text-lg text-white hover:underline underline-offset-[3px] flex justify-center items-center cursor-pointer">
                   Go to the SignIn page
                   <LockOpenIcon className="ml-1" />
                 </Typography>
