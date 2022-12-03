@@ -28,9 +28,14 @@ export default function Home() {
               <source src="/assets/background-img.mp4" type="video/mp4" />
             </video>
           </div>
+          <div className="absolute top-4 mx-3 md:mx-6">
+            <Typography className="text-2xl md:text-3xl text-white font-semibold mt-5">
+              NextAuth App
+            </Typography>
+          </div>
 
           {session && (
-            <div className="absolute top-14 mx-3 md:mx-6 bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl sm:w-11/12 sm:flex sm:justify-between sm:items-center">
+            <div className="absolute top-24 mx-3 md:mx-6 bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl sm:w-11/12 sm:flex sm:justify-between sm:items-center">
               <Typography className="text-white text-base md:text-lg">
                 Signed in as {session?.user?.email}
               </Typography>
@@ -44,7 +49,7 @@ export default function Home() {
               </Button>
             </div>
           )}
-          <div className="absolute top-56 sm:top-44 mx-3 md:mx-6 sm:flex sm:justify-between sm:items-center sm:w-11/12">
+          <div className="absolute top-64 sm:top-52 mx-3 md:mx-6 sm:flex sm:justify-between sm:items-center sm:w-11/12">
             <div className="bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl sm:w-1/2 sm:mr-10">
               <Link href="/signin" underline="none">
                 <Typography className="text-base md:text-lg text-white hover:underline underline-offset-[3px] flex justify-center items-center">
