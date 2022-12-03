@@ -42,10 +42,10 @@ export default function Home() {
               </>
             )}
             <div>
-              <Link href="/signin">
-                <Typography>
-                  Go to the SignIN page
-                  <ArrowForwardIcon />
+              <Link href="/signin" underline="none">
+                <Typography className="text-base md:text-lg text-white hover:underline underline-offset-[3px]">
+                  Go to the SignIn page
+                  <ArrowForwardIcon className="ml-1" />
                 </Typography>
               </Link>
             </div>
