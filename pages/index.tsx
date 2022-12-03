@@ -44,18 +44,18 @@ export default function Home() {
               </Button>
             </div>
           )}
-          <div className="absolute top-56 sm:top-44 mx-3 md:mx-6 bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl">
-            <div>
+          <div className="absolute top-56 sm:top-44 mx-3 md:mx-6 sm:flex sm:justify-between sm:items-center sm:w-11/12">
+            <div className="bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl sm:w-1/2 sm:mr-10">
               <Link href="/signin" underline="none">
-                <Typography className="text-base md:text-lg text-white hover:underline underline-offset-[3px]">
+                <Typography className="text-base md:text-lg text-white hover:underline underline-offset-[3px] flex justify-center items-center">
                   Go to the SignIn page
                   <LockOpenIcon className="ml-1" />
                 </Typography>
               </Link>
             </div>
-            <div>
+            <div className="bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl sm:w-1/2 mt-4 sm:mt-0">
               <Link href="/protected" underline="none">
-                <Typography className="text-base md:text-lg text-white hover:underline underline-offset-[3px]">
+                <Typography className="text-base md:text-lg text-white hover:underline underline-offset-[3px] flex justify-center items-center">
                   Go to the Protected page
                   <SecurityIcon className="ml-1" />
                 </Typography>
