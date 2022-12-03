@@ -29,8 +29,10 @@ export default function Home() {
           </div>
 
           {session && (
-            <div className="absolute top-8 bg-white bg-opacity-20 backdrop-blur-md px-10 py-7 rounded-lg drop-shadow-2xl text-white">
-              Signed in as {session?.user?.email} <br />
+            <div className="absolute top-8 bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl sm:w-10/12 sm:flex sm:justify-between sm:items-center">
+              <Typography className="text-white text-base md:text-lg">
+                Signed in as {session?.user?.email}
+              </Typography>
               <Button
                 size="small"
                 variant="contained"
