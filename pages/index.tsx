@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useSession, signOut } from "next-auth/react";
 import { Button, Typography, Link } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+// import bgImage from "D:\Himali\Learning\next_auth_js\assets\background-img.mp4";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -15,6 +16,17 @@ export default function Home() {
       </Head>
 
       <main>
+        <div>
+          <video
+            className="w-full object-cover h-screen"
+            autoPlay
+            muted
+            loop
+            src="/assets/background-img.mp4"
+          >
+            <source src="/assets/background-img.mp4" type="video/mp4" />
+          </video>
+        </div>
         <div>
           {session && (
             <>
