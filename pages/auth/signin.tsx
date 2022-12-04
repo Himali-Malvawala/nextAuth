@@ -14,10 +14,13 @@ const SignIn = ({ providers }: any) => {
           <source src="/assets/background-img.mp4" type="video/mp4" />
         </video>
       </div>
-      <div className="absolute top-3">
+      <div className="absolute top-3 mx-3 md:mx-6 bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl">
         {Object.values(providers).map((provider: any) => (
-          <div key={provider.name}>
-            <button onClick={() => signIn(provider.id)}>
+          <div key={provider.name} className="my-4">
+            <button
+              onClick={() => signIn(provider.id)}
+              className="bg-[#0c4a6e] transition delay-100 hover:bg-[#fb7185] w-full py-4 px-3 rounded-md text-white"
+            >
               Sign in with {provider.name}
             </button>
           </div>
