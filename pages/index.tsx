@@ -29,9 +29,11 @@ export default function Home() {
             </video>
           </div>
           <div className="absolute top-4 mx-3 md:mx-6">
-            <Typography className="text-2xl md:text-3xl text-white font-semibold mt-5">
-              NextAuth App
-            </Typography>
+            <Link underline="none" href="/">
+              <p className="text-2xl md:text-3xl text-white font-semibold mt-5">
+                NextAuth App
+              </p>
+            </Link>
           </div>
 
           {session && (
