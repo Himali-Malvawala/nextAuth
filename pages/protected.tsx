@@ -25,7 +25,11 @@ const Protected = () => {
             </p>
           </Link>
         </div>
-
+        {status === "loading" && (
+          <div className="absolute top-24 mx-3 md:mx-6 bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl sm:w-11/12 text-white">
+            <p>Loading...</p>
+          </div>
+        )}
         {!session && status === "unauthenticated" && (
           <div className="absolute top-24 mx-3 md:mx-6 bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl sm:w-11/12 flex flex-col justify-center items-center text-center text-white">
             <h1 className="text-xl md:text-2xl font-bold text-red-500">
