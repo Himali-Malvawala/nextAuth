@@ -40,8 +40,8 @@ const SignIn = ({ providers }: any) => {
         </video>
       </div>
       <div className="absolute top-1/3 left-12 sm:left-40 md:left-1/3 mx-3 md:mx-6 bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl">
-        {filteredProviders &&
-          filteredProviders.map((provider: any) => (
+        {providers &&
+          filteredProviders?.map((provider: any) => (
             <div key={provider?.name} className="my-4">
               <button
                 onClick={() => signIn(provider?.id)}
