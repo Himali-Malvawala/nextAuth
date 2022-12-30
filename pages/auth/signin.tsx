@@ -21,8 +21,8 @@ const SignIn = ({ providers }: any) => {
       //   throw new Error(error);
       // }
       setEmail("");
-    } catch (err) {
-      console.log("error: ", err);
+    } catch (error) {
+      console.log("error: ", error);
     }
   };
 
