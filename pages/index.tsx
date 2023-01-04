@@ -35,9 +35,11 @@ export default function Home() {
               </p>
             </Link>
           </div>
-
+          <div className="absolute top-24 text-white mx-3 md:mx-6">
+            This site is currently under maintainenace, please comeback later!
+          </div>
           {session && (
-            <div className="absolute top-24 mx-3 md:mx-6 bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl sm:w-11/12 sm:flex sm:justify-between sm:items-center">
+            <div className="absolute top-40 mx-3 md:mx-6 bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl sm:w-11/12 sm:flex sm:justify-between sm:items-center">
               <Typography className="text-white text-base md:text-lg">
                 Signed in as {session?.user?.email}
               </Typography>
@@ -51,7 +53,7 @@ export default function Home() {
               </Button>
             </div>
           )}
-          <div className="absolute top-64 sm:top-52 mx-3 md:mx-6 sm:flex sm:justify-between sm:items-center sm:w-11/12">
+          <div className="absolute top-[19rem] sm:top-[17rem] mx-3 md:mx-6 sm:flex sm:justify-between sm:items-center sm:w-11/12">
             <div className="bg-white bg-opacity-20 backdrop-blur-md px-5 md:px-10 py-7 rounded-lg drop-shadow-2xl sm:w-1/2 sm:mr-10">
               <Link
                 underline="none"
